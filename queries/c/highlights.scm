@@ -140,6 +140,8 @@
 
 (primitive_type) @type.builtin
 
+((type_qualifier) @type.builtin (#set! "priority" 101))
+
 (sizeof_expression value: (parenthesized_expression (identifier) @type))
 
 ((identifier) @constant
