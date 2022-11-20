@@ -8,7 +8,7 @@
 
 (parameter_declaration
   declarator: (reference_declarator
-                declarator: (identifier) @parameter (#set! "priority" 102))) ;; prioity to override reference.declarator
+    (identifier) @parameter (#set! "priority" 102))) ;; prioity to override reference.declarator
 
 ; function(Foo ...foo)
 (variadic_parameter_declaration
