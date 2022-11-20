@@ -1,6 +1,7 @@
 ; Lower priority to prefer @parameter when identifier appears in parameter_declaration.
 ((identifier) @variable (#set! "priority" 95))
 
+((identifier) @pointer.declarator (#set! "priority" 100))
 (pointer_declarator)
   @pointer.declarator
 
