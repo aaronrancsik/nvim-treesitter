@@ -134,10 +134,11 @@
 
 [
  (type_identifier)
- (primitive_type)
  (sized_type_specifier)
  (type_descriptor)
 ] @type
+
+(primitive_type) @type.builtin
 
 (sizeof_expression value: (parenthesized_expression (identifier) @type))
 
