@@ -4,7 +4,12 @@
  (#match? @field "(^_|^m_|_$)"))
 
 (parameter_declaration
-  declarator: (reference_declarator) @parameter)
+  declarator: (reference_declarator) @reference.declarator (#set! "priority" 101)) ; priority to override operator
+
+(parameter_declaration
+  declarator: (reference_declarator
+                declarator: (identifier) @parameter (#set! "priority" 102))) ;; prioity to override reference.declarator
+
 ; function(Foo ...foo)
 (variadic_parameter_declaration
   declarator: (variadic_declarator
