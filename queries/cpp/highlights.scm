@@ -38,6 +38,8 @@
 (concept_definition
   name: (identifier) @type)
 
+(auto) @type.builtin
+
 (namespace_identifier) @namespace
 ((namespace_identifier) @type
                         (#lua-match? @type "^[A-Z]"))
@@ -151,7 +153,6 @@
  "requires"
  "consteval"
  "constinit"
- (auto)
 ] @keyword
 
 [
