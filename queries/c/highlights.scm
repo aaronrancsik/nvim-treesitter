@@ -179,6 +179,10 @@
 (parameter_declaration
   declarator: (pointer_declarator) @pointer.declarator (#set! "priority" 101))
 
+(parameter_declaration
+  declarator: (pointer_declarator
+                declarator: (identifier) @parameter (#set! "priority" 102)))
+
 (preproc_params (identifier) @parameter)
 
 [
