@@ -1,11 +1,17 @@
 ; Lower priority to prefer @parameter when identifier appears in parameter_declaration.
 ((identifier) @variable (#set! "priority" 95))
 
-(parameter_declaration
-  declarator: (reference_declarator)
-  @reference.declarator)
+(pointer_declarator)
+  @pointer.declarator
 
-((identifier) @reference.declarator (#set! "priority" 95))
+(parameter_declaration
+  declarator: (pointer_declarator)
+  @pointer.declarator)
+
+(declaration
+  declarator: (init_declarator
+    declarator: (pointer_declarator)
+  @pointer.declarator))
 
 [
   "const"
