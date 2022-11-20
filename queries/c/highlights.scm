@@ -5,6 +5,8 @@
   declarator: (reference_declarator)
   @reference.declarator)
 
+((identifier) @reference.declarator (#set! "priority" 95))
+
 [
   "const"
   "default"
