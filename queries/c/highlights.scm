@@ -1,6 +1,10 @@
 ; Lower priority to prefer @parameter when identifier appears in parameter_declaration.
 ((identifier) @variable (#set! "priority" 95))
 
+(parameter_declaration
+  declarator: (reference_declarator)
+  @reference.declarator)
+
 [
   "const"
   "default"
